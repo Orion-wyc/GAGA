@@ -1,6 +1,6 @@
-## Description
+## GAGA: Label Information Enhanced Fraud Detection against Low Homophily in Graphs (WWW '23)
 
-The PaddlePaddle and PyTorch implementation of GAGA (**Label Information Enhanced Fraud Detection against Low Homophily in Graphs**, WWW '23).
+The PyTorch implementation of GAGA.
 
 **Abstract:** Node classification is a substantial problem in graph-based fraud detection. Many existing works adopt Graph Neural Networks (GNNs) to enhance fraud detectors. While promising, currently most GNN-based fraud detectors fail to generalize to the low homophily setting. Besides, label utilization has been proved to be significant factor for node classification problem. But we find they are less effective in fraud detection tasks due to the low homophily in graphs. In this work, we propose GAGA, a novel Group AGgregation enhanced TrAnsformer, to tackle the above challenges. Specifically, the group aggregation provides a portable method to cope with the low homophily issue. Such an aggregation explicitly integrates the label information to generate distinguishable neighborhood information. Along with group aggregation, an attempt towards end-to-end trainable group encoding is proposed which augments the original feature space with the class labels. Meanwhile, we devise two additional learnable encodings to recognize the structural and relational context. Then, we combine the group aggregation and the learnable encodings into a Transformer encoder to capture the semantic information. Experimental results clearly show that GAGA outperforms other competitive graph-based fraud detectors by up to 24.39% on two trending public datasets and a real-world industrial dataset from Baidu. Even more, the group aggregation is demonstrated to outperform other label utilization methods (e.g., C&S, BoT/UniMP) in the low homophily setting.
 
@@ -42,6 +42,21 @@ The PaddlePaddle and PyTorch implementation of GAGA (**Label Information Enhance
    python main_transformer.py --config configs/yelpchi_paper.json --gpu 0  --log_dir logs --early_stop 100
    python main_transformer.py --config configs/amazon_paper.json --gpu 1  --log_dir logs --early_stop 100
    ```
+
+
+
+## Cite
+
+If you use GAGA in a scientific publication, we would appreciate citations to the following paper:
+
+```
+@inproceedings{wang2023label,
+  title={Label Information Enhanced Fraud Detection against Low Homophily in Graphs},
+  author={Wang, Yuchen and Zhang, Jinghui and Huang, Zhengjie and Li, Weibin and Feng, Shikun and Ma, Ziheng and Sun, Yu and Yu, Dianhai and Dong, Fang and Jin, Jiahui and Wang, Beilun and Luo, Junzhou},
+  booktitle={Proceedings of the ACM Web Conference 2023},
+  year={2023}
+}
+```
 
 
 
