@@ -58,6 +58,7 @@ If you use GAGA in a scientific publication, we would appreciate citations to th
 }
 ```
 
+Email: yuchen_seu@aa.seu.edu.cn
 
 
 ## Acknowledgements
