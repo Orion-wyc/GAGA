@@ -41,6 +41,9 @@ def evaluation(args, model, eval_loader, threshold_moving=True, thres=0.5, devic
         for (batch_seq, batch_labels) in tqdm(eval_loader):
             batch_seq = batch_seq.to(device)
             batch_logits = model(batch_seq)
+            # the last batch size may be 1 if drop_last is False
+            if len(batch_logits.shape) == 1:
+                batch_logits = torch.unsqueeze(batch_logits, 0)    
             prob_list.append(batch_logits.cpu())
             label_list.append(batch_labels.cpu())
 
